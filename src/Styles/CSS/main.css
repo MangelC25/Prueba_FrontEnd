@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --bg-topbar: $bg-topbar;
+  --text-colortopbar: $text-colortopbar;
+  --text-colortopbarHover: $text-colortopbarHover;
+  --font-family-Topbar: $font-family-Topbar;
+  --font-style-Topbar: $font-style-Topbar;
+  --font-weight-Topbar: $font-weight-Topbar;
+  --bg-header: $bg-header;
+  --bg-button-header: $bg-button-header;
+  --bg-button: $bg-button;
+  --text-colornavbar: $text-colornavbar;
+  --text-colornavbarHover: $text-colornavbarHover;
+  --font-family-Menubar: $font-family-Menubar;
+  --font-style-Menubar: $font-style-Menubar;
+  --font-weight-Menubar: $font-weight-Menubar;
+  --font-family-Home: $font-family-Home;
+  --font-weight-Home: $font-weight-Home;
+  --font-family-Title:$font-family-Title;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 45px;
+}
+
+section {
+  padding: 1rem 5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+button {
+  position: relative;
+  background: linear-gradient(45deg, #337901, #55cd00);
+  width: 25%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(76, 198, 0, 0.5);
+  pointer-events: all;
+  z-index: 1;
+  cursor: pointer;
+}
+button::before {
+  position: absolute;
+  content: "";
+  border-radius: 1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));
+  z-index: -1;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+button:hover {
+  box-shadow: 5px 5px 10px rgba(255, 145, 0, 0.5);
+}
+button:hover::before {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

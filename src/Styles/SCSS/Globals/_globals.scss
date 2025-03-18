@@ -1,0 +1,70 @@
+@use "../Globals/variables" as variables;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 45px;
+}
+
+section{
+  padding: variables.$global-padding;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+button{
+  position: relative;
+  background: variables.$bg-button;
+  width: 25%;
+  padding: .5rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(76, 198, 0, 0.5);
+  pointer-events: all;
+  z-index: 1;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: '';
+    border-radius: 1rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: variables.$bg-button-header;
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+  }
+
+
+  &:hover {
+    box-shadow: 5px 5px 10px rgba(255, 145, 0, 0.5);
+
+    &::before{
+      opacity: 1;
+    }
+  }
+}
+
+
+
+

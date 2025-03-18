@@ -1,0 +1,49 @@
+@use "typography" as fuentes;
+
+$bg-topbar: #474747;
+$text-colortopbar: white;
+$text-colortopbarHover: rgb(0, 126, 223);
+$font-family-Topbar: fuentes.$font-family-Topbar;
+$font-style-Topbar: fuentes.$font-style-Topbar;
+$font-weight-Topbar: fuentes.$font-weight-Topbar;
+
+$font-family-Menubar: fuentes.$font-family-Menubar;
+$font-style-Menubar: fuentes.$font-style-Menubar;
+$font-weight-Menubar: fuentes.$font-weight-Menubar;
+
+$font-family-Home: fuentes.$font-family-Home;
+$font-weight-Home: fuentes.$font-weight-Home;
+
+$global-padding: 1rem 5rem;
+
+$bg-header: rgb(255, 255, 255);
+$text-colornavbar: rgb(51, 36, 0);
+$text-colornavbarHover: rgb(255, 255, 255);
+$bg-button-header: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));  
+$bg-button: linear-gradient(45deg, #337901, #55cd00);  
+
+
+$font-family-Title: fuentes.$font-family-Title;
+
+:root {
+  --bg-topbar: $bg-topbar;
+  --text-colortopbar: $text-colortopbar;
+  --text-colortopbarHover: $text-colortopbarHover;
+  --font-family-Topbar: $font-family-Topbar;
+  --font-style-Topbar: $font-style-Topbar;
+  --font-weight-Topbar: $font-weight-Topbar;
+
+  --bg-header: $bg-header;
+  --bg-button-header: $bg-button-header;
+  --bg-button: $bg-button;
+  --text-colornavbar: $text-colornavbar;
+  --text-colornavbarHover: $text-colornavbarHover;
+  --font-family-Menubar: $font-family-Menubar;
+  --font-style-Menubar: $font-style-Menubar;
+  --font-weight-Menubar: $font-weight-Menubar;
+
+  --font-family-Home: $font-family-Home;
+  --font-weight-Home: $font-weight-Home;
+
+  --font-family-Title:$font-family-Title;
+}
