@@ -22,16 +22,14 @@ section, .footer{
 }
 
 .container {
-  margin: 1rem 0;
-  padding: 1rem;
+  padding: variables.$global-padding;
   width: 100%;
 }
 
 button{
   position: relative;
   background: variables.$bg-button;
-  width: 25%;
-  padding: .5rem;
+  padding: .5rem 1rem;
   border-radius: 1rem;
   font-size: 1.2rem;
   color: white;
@@ -57,7 +55,7 @@ button{
 
 
   &:hover {
-    box-shadow: 5px 5px 10px rgba(255, 145, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(99, 179, 237, 0.5);
 
     &::before{
       opacity: 1;
