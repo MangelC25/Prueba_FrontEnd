@@ -1,6 +1,10 @@
 export default function Header() {
   return (
-    <header>
+    <header className="header">
+      <div className="logo">
+        {/* Puedes colocar un logo o nombre de la empresa */}
+        <h1>DigitalArc</h1>
+      </div>
       <nav className="header__nav">
         <ul>
           <li>

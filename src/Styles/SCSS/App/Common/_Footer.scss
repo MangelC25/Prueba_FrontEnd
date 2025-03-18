@@ -1,0 +1,12 @@
+@use "../../Globals/variables" as variables;
+
+.footer {
+  background: linear-gradient(90deg, #1a202c, #00276a);
+  color: #fff;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+  font-family: variables.$font-family-Menubar;
+  z-index: 100;
+}

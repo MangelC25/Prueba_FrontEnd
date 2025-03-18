@@ -36,7 +36,7 @@ html {
   scroll-padding-top: 45px;
 }
 
-section {
+section, .footer {
   padding: 1rem 5rem;
   position: relative;
   display: flex;
@@ -71,7 +71,7 @@ button::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(146, 66, 0, 0.996), rgb(224, 153, 0));
+  background-image: linear-gradient(45deg, #005ea0, #63b3ed);
   z-index: -1;
   transition: opacity 0.3s linear;
   opacity: 0;
@@ -81,6 +81,100 @@ button:hover {
 }
 button:hover::before {
   opacity: 1;
+}
+
+.header {
+  background: linear-gradient(90deg, #1a202c, #00276a);
+  color: #fff;
+  padding: 1rem 5rem;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  font-family: "Oswald", serif;
+  z-index: 100;
+}
+.header .logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.header .header__nav {
+  display: flex;
+}
+.header .header__nav ul {
+  list-style-type: none;
+  border-radius: 1rem;
+  gap: 1rem;
+  display: flex;
+}
+.header .header__nav ul li {
+  position: relative;
+  padding: 0.8rem;
+}
+.header .header__nav ul li a {
+  position: relative;
+  border-radius: 0 0 5% 5%;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.header .header__nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s width ease-in-out;
+}
+.header .header__nav ul li a:hover {
+  color: #63b3ed;
+}
+.header .header__nav ul li a:hover::before {
+  width: 100%;
+}
+.header .header__nav ul li::before {
+  position: absolute;
+  content: "";
+  border-radius: 1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, #005ea0, #63b3ed);
+  z-index: -1;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+.header .header__nav ul li:hover {
+  background: linear-gradient(45deg, #005ea0, #63b3ed);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(99, 180, 237, 0.5);
+}
+.header .header__nav ul li:hover::before {
+  opacity: 1;
+}
+.header .header__nav ul li:hover > a {
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  background: linear-gradient(90deg, #1a202c, #00276a);
+  color: #fff;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Oswald", serif;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=main.css.map */
