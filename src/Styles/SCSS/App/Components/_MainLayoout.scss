@@ -1,17 +1,18 @@
 @use "../../Globals/variables" as variables;
 
 @use "Subcomponetes/ProductsForm";
+@use "Subcomponetes/ProductList";
 
 .main {
-  border: solid 3px red;
   font-family: variables.$font-family-Title;
   position: relative;
   margin-top: 5.1rem;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 
   .container {
     height: 100%;
     width: 100%;
+    margin: 1rem 0;
 
     .section-title {
       font-size: 1.3rem;
@@ -27,6 +28,7 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 20px;
+        
       }
     }
 
@@ -34,6 +36,8 @@
       position: relative;
       height: fit-content;
       width: 100%;
+      display: flex;
+      gap: 2rem;
     }
   }
 }

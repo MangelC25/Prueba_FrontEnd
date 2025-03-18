@@ -1,6 +1,7 @@
 import Footer from "./Common/Footer";
 import Header from "./Common/Header";
 import MainLayout from "./Components/MainLayout";
+import ProductList from "./Components/Subcomponents/ProductList";
 import ProductsForm from "./Components/Subcomponents/ProductsForm";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <MainLayout>
         <ProductsForm />
+        <ProductList />
       </MainLayout>
       <Footer />
     </>

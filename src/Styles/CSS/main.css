@@ -168,7 +168,6 @@ button:hover::before {
 .product-form {
   height: fit-content;
   padding: 1rem 2rem;
-  width: 45%;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
@@ -225,16 +224,151 @@ button:hover::before {
   margin: 2rem 0;
 }
 
+.products-list {
+  position: relative;
+  height: 100%;
+  padding: 2rem;
+  width: 70%;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+}
+.products-list .filters {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.products-list .filters label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.products-list .filters label select {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid rgb(161.9142857143, 197.9142857143, 240.0857142857);
+  border-radius: 0.3rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.products-list .filters label select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+.products-list .products {
+  position: relative;
+  height: fit-content;
+}
+.products-list .products #productsList-Title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.products-list .products #productsList-Title h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(99, 179, 237, 0.6);
+  background: linear-gradient(45deg, #005ea0 15%, #63b3ed 30%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.products-list .products .products-container {
+  padding: 2rem;
+  height: fit-content;
+  width: fit-content;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.products-list .products .products-container table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  padding: 0 1rem;
+}
+.products-list .products .products-container table thead {
+  display: block;
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.products-list .products .products-container table thead tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  text-align: center;
+}
+.products-list .products .products-container table thead tr th {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.products-list .products .products-container table tbody {
+  width: fit-content;
+  display: block;
+  max-height: 15.8rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.products-list .products .products-container table tbody::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+}
+.products-list .products .products-container table tbody::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ffb300);
+  border-radius: 2rem;
+}
+.products-list .products .products-container table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+.products-list .products .products-container table tbody tr:hover, .products-list .products .products-container table tbody tr.selected {
+  color: white;
+  background-image: linear-gradient(to right, rgb(91, 91, 91), rgb(166, 166, 166));
+  transform: scale(1.02);
+}
+.products-list .products .products-container table tbody tr td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.products-list .products .products-container table tbody tr .actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.products-list .products .products-container table tbody tr .actions button {
+  cursor: pointer;
+}
+.products-list .products .products-container table tbody tr .actions .delete::before {
+  background-image: linear-gradient(45deg, #6c0101, #f10000);
+}
+.products-list .products .products-container table tbody tr .actions .delete:hover {
+  box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.5);
+}
+
 .main {
-  border: solid 3px red;
   font-family: "Poppins", serif;
   position: relative;
   margin-top: 5.1rem;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 .main .container {
   height: 100%;
   width: 100%;
+  margin: 1rem 0;
 }
 .main .container .section-title {
   font-size: 1.3rem;
@@ -255,6 +389,8 @@ button:hover::before {
   position: relative;
   height: fit-content;
   width: 100%;
+  display: flex;
+  gap: 2rem;
 }
 
 .footer {
