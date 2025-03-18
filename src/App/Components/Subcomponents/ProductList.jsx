@@ -17,13 +17,13 @@ export default function ProductList() {
       createdAt: "2024-03-14",
     },
     {
-      id: 103,
+      id: 104,
       name: "Mouse Inalámbrico",
       quantity: 15,
       createdAt: "2024-03-14",
     },
     {
-      id: 103,
+      id: 105,
       name: "Mouse Inalámbrico",
       quantity: 15,
       createdAt: "2024-03-14",
