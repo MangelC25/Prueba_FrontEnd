@@ -19,10 +19,31 @@
     flex-direction: column;
     margin-bottom: 1.5rem;
 
+    span {
+      display: inline-block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f5f5f5; /* Fondo suave para indicar que es de solo lectura */
+      color: #555; /* Color de texto ligeramente grisáceo */
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #eaeaea; /* Un ligero cambio al pasar el cursor */
+      }
+    }
+
+    #codigo{
+      width: fit-content;
+    }
+
     label {
+      padding: 0.75rem 0;
       font-size: 1rem;
       color: #333;
-      margin-bottom: 0.5rem;
     }
 
     input,
@@ -51,16 +72,6 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-
-    label {
-      border: solid red 1px;
-      margin-bottom: 0;
-    }
-
-    input[type="number"] {
-      margin-left: 5px;
-      width: 10rem; /* Puedes ajustar este valor según necesidad */
-    }
 
     input[type="text"] {
       width: 100%; /* Puedes ajustar este valor según necesidad */
