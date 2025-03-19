@@ -1,0 +1,236 @@
+@use "../App/Components/MainLayoout" as main;
+@use "../App/Common/Header" as Header;
+@use "../App/Common/Footer" as Footer;
+
+@media screen and (max-width: 1920px) {
+  @include Header.Header();
+  @include main.MainLayout();
+  @include Footer.Footer();
+}
+
+@media screen and (max-width: 1440px) {
+  @include Header.Header();
+  @include main.MainLayout();
+  @include Footer.Footer();
+}
+
+@media screen and (max-width: 1367px) {
+  @include Header.Header();
+  @include main.MainLayout();
+  @include Footer.Footer();
+}
+
+@media screen and (max-width: 1280px) {
+  @include Header.Header();
+  @include main.MainLayout();
+  @include Footer.Footer();
+}
+
+@media screen and (max-width: 1025px) {
+  @include Header.Header();
+  @include main.MainLayout();
+  @include Footer.Footer();
+}
+
+@media screen and (max-width: 769px) {
+  @include Header.Header();
+
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    .menu-toggle {
+      display: block;
+      box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 5px 5px 10px rgba(99, 179, 237, 0.5);
+      }
+    }
+
+    .header__nav {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 80%;
+      display: none; // Oculto por defecto
+      flex-direction: column;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.5s ease-in-out;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+
+      &.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          width: 100%;
+          text-align: center;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  @include main.MainLayout();
+
+  .main {
+    margin-top: 0rem;
+  }
+
+  @include Footer.Footer();
+}
+
+@media screen and (max-width: 576px) {
+  @include Header.Header();
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    .menu-toggle {
+      display: block;
+      box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 5px 5px 10px rgba(99, 179, 237, 0.5);
+      }
+    }
+
+    .header__nav {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 80%;
+      display: none; // Oculto por defecto
+      flex-direction: column;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.5s ease-in-out;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+
+      &.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          width: 100%;
+          text-align: center;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  @include main.MainLayout();
+
+  .main {
+    margin-top: 0rem;
+  }
+
+  @include Footer.Footer();
+}
+
+@media screen and (max-width: 425px) {
+  @include Header.Header();
+
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    .menu-toggle {
+      display: block;
+      box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 5px 5px 10px rgba(99, 179, 237, 0.5);
+      }
+    }
+
+    .header__nav {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 80%;
+      display: none; // Oculto por defecto
+      flex-direction: column;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.5s ease-in-out;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+
+      &.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+          width: 100%;
+          text-align: center;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  @include main.MainLayout();
+
+  .main{
+    margin-top: 0rem;
+  }
+  
+  @include Footer.Footer();
+}

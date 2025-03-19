@@ -1,11 +1,22 @@
+import  { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+
 export default function Header() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <header className="header">
       <div className="logo">
         {/* Puedes colocar un logo o nombre de la empresa */}
         <h1>DigitalArc</h1>
       </div>
-      <nav className="header__nav">
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+      <nav className={`header__nav ${menuOpen ? "active" : ""}`}>
         <ul>
           <li>
             <a href="#productos">Productos</a>

@@ -1,93 +1,102 @@
 @use "../../Globals/variables" as variables;
 
-.header {
-  background: linear-gradient(90deg, #1a202c, #00276a);
-  color: #fff;
-  padding: variables.$global-padding;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  font-family: variables.$font-family-Menubar;
-  z-index: 100;
-
-  .logo h1 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-
-  .header__nav {
+@mixin Header() {
+  .header {
+    background: linear-gradient(90deg, #1a202c, #00276a);
+    color: #fff;
+    padding: variables.$global-padding;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: variables.$font-family-Menubar;
 
-    ul {
-      list-style-type: none;
-      border-radius: 1rem;
-      gap: 1rem;
+    .logo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .header__nav {
       display: flex;
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
 
-      li {
-        position: relative;
-        padding: 0.8rem;
-
-        a {
+        li {
           position: relative;
-          border-radius: 0 0 5% 5%;
-          width: 100%;
-          color: #fff;
-          text-decoration: none;
-          transition: color 0.3s;
+          padding: 0.8rem;
+
+          a {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 2px;
+              top: 100%;
+              left: 0;
+              background-color: variables.$text-colornavbarHover;
+              transition: 0.5s width ease-in-out;
+            }
+
+            &:hover {
+              color: variables.$text-colornavbarHover;
+
+              &::before {
+                width: 100%;
+              }
+            }
+          }
 
           &::before {
-            content: "";
             position: absolute;
-            width: 0;
-            height: 2px;
-            top: 100%;
+            content: "";
+            border-radius: 1rem;
+            top: 0;
+            right: 0;
+            bottom: 0;
             left: 0;
-            background-color: variables.$text-colornavbarHover;
-            transition: 0.5s width ease-in-out;
+            background-image: variables.$bg-button-header;
+            z-index: -1;
+            transition: opacity 0.3s linear;
+            opacity: 0;
           }
 
           &:hover {
-            color: #63b3ed;
+            background: variables.$bg-button-header;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 10px rgba(99, 180, 237, 0.5);
 
             &::before {
-              width: 100%;
+              opacity: 1;
             }
-          }
-        }
 
-        &::before {
-          position: absolute;
-          content: "";
-          border-radius: 1rem;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background-image: variables.$bg-button-header;
-          z-index: -1;
-          transition: opacity 0.3s linear;
-          opacity: 0;
-        }
-
-        &:hover {
-          background: variables.$bg-button-header;
-          border-radius: 1rem;
-          box-shadow: 5px 5px 10px rgba(99, 180, 237, 0.5);
-
-          &::before {
-            opacity: 1;
-          }
-
-          > a {
-            color: variables.$text-colornavbarHover;
+            > a {
+              color: variables.$text-colornavbarHover;
+            }
           }
         }
       }
