@@ -181,6 +181,7 @@ button:hover::before {
   pointer-events: all;
 }
 .products-list .filters {
+  position: relative;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -225,7 +226,6 @@ button:hover::before {
 .products-list .products .products-container {
   background: linear-gradient(to bottom, #b5b5b5, #666666);
   padding: 2rem;
-  height: f;
   width: fit-content;
   border-collapse: collapse;
   border-radius: 0.5rem;
@@ -1446,6 +1446,21 @@ button:hover::before {
   .main {
     margin-top: 0rem;
   }
+  .main .main-content {
+    flex-direction: column;
+  }
+  .main .main-content .product-form, .main .main-content .products-list {
+    width: 100%;
+  }
+  .main .main-content .products-list .products {
+    font-size: 0.1rem;
+  }
+  .main .main-content .products-list .products #productsList-Title h2 {
+    font-size: 1.5rem;
+  }
+  .main .main-content .products-list .products .products-container table thead th, .main .main-content .products-list .products .products-container table thead tr, .main .main-content .products-list .products .products-container table tbody th, .main .main-content .products-list .products .products-container table tbody tr {
+    font-size: 0.8rem;
+  }
   .footer {
     background: linear-gradient(90deg, #1a202c, #00276a);
     color: #fff;
@@ -1455,6 +1470,10 @@ button:hover::before {
     box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
     font-family: "Oswald", serif;
     z-index: 100;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1678,6 +1697,24 @@ button:hover::before {
   .main {
     margin-top: 0rem;
   }
+  .main .container .section-title {
+    font-size: 1rem;
+  }
+  .main .main-content {
+    flex-direction: column;
+  }
+  .main .main-content .product-form, .main .main-content .products-list {
+    width: 100%;
+  }
+  .main .main-content .products-list .products {
+    font-size: 0.1rem;
+  }
+  .main .main-content .products-list .products #productsList-Title h2 {
+    font-size: 1.5rem;
+  }
+  .main .main-content .products-list .products .products-container table thead th, .main .main-content .products-list .products .products-container table thead tr, .main .main-content .products-list .products .products-container table tbody th, .main .main-content .products-list .products .products-container table tbody tr {
+    font-size: 0.8rem;
+  }
   .footer {
     background: linear-gradient(90deg, #1a202c, #00276a);
     color: #fff;
@@ -1687,6 +1724,12 @@ button:hover::before {
     box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
     font-family: "Oswald", serif;
     z-index: 100;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1910,6 +1953,24 @@ button:hover::before {
   .main {
     margin-top: 0rem;
   }
+  .main .container .section-title {
+    font-size: 1rem;
+  }
+  .main .main-content {
+    flex-direction: column;
+  }
+  .main .main-content .product-form, .main .main-content .products-list {
+    width: 100%;
+  }
+  .main .main-content .products-list .products {
+    font-size: 0.1rem;
+  }
+  .main .main-content .products-list .products #productsList-Title h2 {
+    font-size: 1.5rem;
+  }
+  .main .main-content .products-list .products .products-container table thead th, .main .main-content .products-list .products .products-container table thead tr, .main .main-content .products-list .products .products-container table tbody th, .main .main-content .products-list .products .products-container table tbody tr {
+    font-size: 0.8rem;
+  }
   .footer {
     background: linear-gradient(90deg, #1a202c, #00276a);
     color: #fff;
@@ -1919,6 +1980,12 @@ button:hover::before {
     box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
     font-family: "Oswald", serif;
     z-index: 100;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 

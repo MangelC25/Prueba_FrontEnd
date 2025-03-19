@@ -29,7 +29,7 @@ export default function MainLayout({ children }) {
   const hexPerRow = Math.max(1, Math.ceil(width / HEX_WIDTH));
 
   // Calculamos cuántas filas caben (en alto)
-  const rowCount = Math.max(14, Math.ceil(height / HEX_HEIGHT));
+  const rowCount = Math.max(20, Math.ceil(height / HEX_HEIGHT));
 
   // Generamos el array bidimensional
   const rows = [];

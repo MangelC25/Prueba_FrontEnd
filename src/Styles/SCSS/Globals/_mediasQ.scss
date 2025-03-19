@@ -95,9 +95,46 @@
 
   .main {
     margin-top: 0rem;
+
+    .main-content {
+      flex-direction: column;
+
+      .product-form, .products-list{
+        width: 100%;
+      }
+
+      .products-list{
+        .products{
+          font-size: 0.1rem;
+
+          #productsList-Title {
+      
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+        
+          .products-container {
+          
+            table {
+              thead, tbody {
+                th, tr {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+          }
+      }
+    }
   }
 
   @include Footer.Footer();
+
+  .footer {
+    display: flex;
+    justify-content: center;  
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -162,9 +199,54 @@
 
   .main {
     margin-top: 0rem;
+
+    .container {
+      .section-title {
+        font-size: 1rem;
+      }
+    }
+
+    .main-content {
+      flex-direction: column;
+
+      .product-form, .products-list{
+        width: 100%;
+      }
+
+      .products-list{
+        .products{
+          font-size: 0.1rem;
+
+          #productsList-Title {
+      
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+        
+          .products-container {
+          
+            table {
+              thead, tbody {
+                th, tr {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+          }
+      }
+    }
   }
 
   @include Footer.Footer();
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -228,9 +310,54 @@
 
   @include main.MainLayout();
 
-  .main{
+  .main {
     margin-top: 0rem;
+
+    .container {
+      .section-title {
+        font-size: 1rem;
+      }
+    }
+
+    .main-content {
+      flex-direction: column;
+
+      .product-form, .products-list{
+        width: 100%;
+      }
+
+      .products-list{
+        .products{
+          font-size: 0.1rem;
+
+          #productsList-Title {
+      
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+        
+          .products-container {
+          
+            table {
+              thead, tbody {
+                th, tr {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+          }
+      }
+    }
   }
-  
+
   @include Footer.Footer();
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
 }
