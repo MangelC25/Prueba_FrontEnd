@@ -16,7 +16,6 @@
   .filters {
     margin-bottom: 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     label {
@@ -37,6 +36,10 @@
           cursor: pointer;
         }
       }
+    }
+
+    #orderTable{
+      margin-left: 1.2rem;
     }
   }
 
@@ -60,7 +63,8 @@
     }
 
     .products-container {
-      background-color: #434343;
+      background: linear-gradient(to bottom, #b5b5b5, #666666);
+
       padding: 2rem;
       height: f;
       width: fit-content;

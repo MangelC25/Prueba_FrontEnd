@@ -266,7 +266,6 @@ button:hover::before {
 .products-list .filters {
   margin-bottom: 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .products-list .filters label {
@@ -286,6 +285,9 @@ button:hover::before {
   box-shadow: 0 0 5px rgba(74, 144, 226, 0.7);
   cursor: pointer;
 }
+.products-list .filters #orderTable {
+  margin-left: 1.2rem;
+}
 .products-list .products {
   position: relative;
   height: 31.5rem;
@@ -304,7 +306,7 @@ button:hover::before {
   -webkit-text-fill-color: transparent;
 }
 .products-list .products .products-container {
-  background-color: #434343;
+  background: linear-gradient(to bottom, #b5b5b5, #666666);
   padding: 2rem;
   height: f;
   width: fit-content;
