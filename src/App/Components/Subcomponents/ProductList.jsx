@@ -1,39 +1,10 @@
-import React from "react";
+import { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
-export default function ProductList() {
-  const initialData = [
-    { id: 101, name: "Laptop HP", quantity: 10, createdAt: "2024-03-10" },
-    {
-      id: 102,
-      name: "Teclado Mecánico",
-      quantity: 25,
-      createdAt: "2024-03-12",
-    },
-    {
-      id: 103,
-      name: "Mouse Inalámbrico",
-      quantity: 15,
-      createdAt: "2024-03-14",
-    },
-    {
-      id: 104,
-      name: "Mouse Inalámbrico",
-      quantity: 15,
-      createdAt: "2024-03-14",
-    },
-    {
-      id: 105,
-      name: "Mouse Inalámbrico",
-      quantity: 15,
-      createdAt: "2024-03-14",
-    },
-  ];
+export default function ProductList({ products, onDeleteProduct, onEditProduct,
+}) {
+  const [selectedRowId, setSelectedRowId] = useState(null);
 
-  // Almacena el id de la fila seleccionada
-  const [selectedRowId, setSelectedRowId] = React.useState(null);
-
-  // Función para manejar la selección de una fila
   const handleSelect = (id) => {
     setSelectedRowId((prevId) => (prevId === id ? null : id));
   };
@@ -68,25 +39,25 @@ export default function ProductList() {
               </tr>
             </thead>
             <tbody>
-              {initialData.map((product) => (
+              {products.map((product) => (
                 <tr
                   key={product.id}
                   onClick={() => handleSelect(product.id)}
-                  // Condicionalmente aplicamos la clase "selected" si el id coincide
+                  
                   className={`product ${
                     selectedRowId === product.id ? "selected" : ""
                   }`}
                 >
-                  <td>{product.id}</td>
+                  <td>{String(product.id).padStart(5, "0")}</td>
                   <td>{product.name}</td>
                   <td>{product.quantity}</td>
                   <td>{product.createdAt}</td>
                   <td>
                     <div className="actions">
-                      <button title="Editar" className="edit">
+                      <button title="Editar" className="edit" onClick={() => onEditProduct(product)}>
                         <FaEdit />
                       </button>
-                      <button title="Eliminar" className="delete">
+                      <button title="Eliminar" className="delete" onClick={() => onDeleteProduct(product.id)}>
                         <FaTrash />
                       </button>
                     </div>
